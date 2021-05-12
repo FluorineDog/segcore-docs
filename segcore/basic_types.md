@@ -1,4 +1,4 @@
-# 基本术语
+# 基本类型
 
 - `Collection`: 数据表, 包含多个 Segment
 - `Segment`: 存放一段数据的内存结构, 支持可并发的插入, 删除, 查询, 索引加载, 监控统计等功能. 
@@ -13,4 +13,3 @@
   - `FieldName`: 列名
   - `FieldId`: 列的唯一编号
   - (隐藏) `FieldOffset`, 为 Schema 中 `vector<Field>` 的下标
--  
