@@ -12,4 +12,4 @@
   - `metric_type` (when dataType is vector type, optional): 这个向量所对应的 MetricType, 和小批索引相关, 可以为空. 
   - `FieldName`: 列名
   - `FieldId`: 列的唯一编号
-  - (隐藏) `FieldOffset`, 为 Schema 中 `vector<Field>` 的下标
+  - (隐藏) `FieldOffset`, 为 Schema 中 `vector<Field>` 的下标. Segcore 内部计算基本基于 FieldOffset
