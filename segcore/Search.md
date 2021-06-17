@@ -7,7 +7,7 @@ Boolean Expr 执行模式如下:
 2. proxynode 对 proto 进行解析,生成 protobuf 格式的 plan, 并进行静态检查, 塞入上述的 proto 中
 3. querynode 反序列化 protobuf 中的 plan 生成可执行的 PlanAST, 执行 Segcore 查询操作.
 
-Expr 文法参见 [expr_grammar.md](expr_grammer.md)
+Expr 文法参见 [expr_grammar.md](expr_grammar.md)
 
 # Segcore 查询流程
 
