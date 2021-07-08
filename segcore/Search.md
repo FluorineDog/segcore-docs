@@ -14,12 +14,9 @@ Expr 文法参见 [expr_grammar.md](expr_grammar.md)
    1. 当 Predicate 存在时, 访问执行 PredicateExpr 获得 bitset 作为向量查询的 bitmask. 
    2. 当 Predicate 不存在时, 向量查询的 bitmask 条件为空.
 2. PredicateExpr 所对应的 AST 上有以下节点. 使用 Visitor 模式, 自顶向下解释执行, 下层结果将作为上层的输入, 得到最终的 Bitmask
-   1. BoolUnaryOpExpr: 非语句
-   2. BoolBinaryExpr: 与或语句
+   1. LogicalUnaryExpr: 非语句
+   2. LogicalBinaryExpr: 与或语句
    3. TermExpr: 点查语句, `A in [1, 2, 3]`
    4. CompareExpr: 比较语句
+3. TermExpr 和 CompareExpr 是执行的叶节点。
 
-# 向量查询分派
-获得 Predicate 后, 还会根据 Segment 状态进行查询分发: 
-1. 对于 Growing Segment, 会分发到暴力搜索或内部的小批量索引上执行
-2. 对于 Sealed Segment, 会
