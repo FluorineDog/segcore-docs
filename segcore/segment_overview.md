@@ -7,6 +7,7 @@ Segment 目前有两种类型
 1. `SegmentInterface` 
 2. `SegmentGrowing` & `CreateGrowingSegment`
 3. `SegmentSealed` & `CreateSealedSegment`
+
 三个类的函数声明及对应的构造函数，其余内部函数与皆作为实现细节隐藏于
 1. `SegmentInternalInterface`
 2. `SegmentGrowingImpl`
