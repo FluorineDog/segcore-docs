@@ -9,4 +9,4 @@
 
 具体细节可以参见 `${milvus_root}/internal/core/src/segcore/SegmentInterface.h`
 ## 内部函数 
-1. 
+
