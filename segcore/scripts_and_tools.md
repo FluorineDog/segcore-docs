@@ -21,6 +21,9 @@ Segcore 开发过程中可能使用到以下脚本与命令
     - 输出到 cmake-build-debug 文件夹下 (`-o cmake-build-debug`)
 - 也可以使用 Clion 打开 core 这个文件夹，选择 cmake 项目
   - 需要修改参数 `CMake Options`, 保持和上面 `./build.sh` 的第一行输出的参数一致.
+- 编译后，有以下可执行文件值得关注
+  - ${build}/unittest/all_tests: GTest 格式的测试程序，包含所有测试，可以使用 `--gtest_filter=` 筛选需要的测试
+  - ${build}/bench/all_bench: 性能测试，基于 Google Benchmark. 
   
 ## Visitor 代码生成 (这一段可以忽略，手写代码也不是不行)
 - 在 milvus/tools/core_gen 下
