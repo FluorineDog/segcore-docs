@@ -26,10 +26,10 @@ Segcore 开发过程中可能使用到以下脚本与命令
 - 在 milvus/tools/core_gen 下
   - 调用 `./all_generate.py` 可以生成 visitor 模式的相关文件
   - 模版来自 templates 目录, 使用 `assmeble` 函数装配
-    - 一段模版格式为 `@@@@<tag>[@<repeated_key>]...####` 
+    - 一段模版格式为 `@@@@<output_tag>[@<repeated_key>]...####` 
       - 如果有 `<repeated_key>` 将自动根据数组重复生成
       - 内部的所有 `@@<tag>@@` 都会被 `<tag>` 对应的文本替换掉
-      - 生成的文本输出到 `<tag>` 中，`main` 为最终的文件输出
+      - 生成的文本输出到 `<output_tag>` 中，`main` 为最终的文件输出
   - 参数和配置文件在 `all_generate.py` 中可以调整
   - `extract_extra_body` 将 cpp 中填写的类成员 `ctor_and_member` 和必要的头文件 `extra_inc` 塞入生成的 .h 中
   - `meta_gen` 从被访问数据结构的定义文件中，抽取类名列表 `<struct_name>`, 以供代码生成. 
