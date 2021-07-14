@@ -11,7 +11,18 @@ Segcore 开发过程中可能使用到以下脚本与命令
     - 是否 clang-format
     - 是否添加 license 信息
     - 是否满足 `cpplint.py` 的标准, 可能需要手动修复
+  - `make verifier` 也包含 `make cppcheck` 的功能
 
+## 代码编译
+- 在 milvus/internal/core 下
+  - 使用 `./build.sh -u -t Debug -o cmake-build-debug` 
+    - 编译 unittest (`-u`)
+    - 使用 Debug 模式编译 (`-t Debug`)
+    - 输出到 cmake-build-debug 文件夹下 (`-o cmake-build-debug`)
+    - 
+- 也可以使用 Clion 打开 core 这个文件夹，选择 cmake 项目
+  - 需要修改参数 `CMake Options`, 保持和上面 `./build.sh` 的第一行输出的参数一致.
+  
 ## Visitor 代码生成 (这一段可以忽略，手写代码也不是不行)
 - 在 milvus/tools/core_gen 下
   - 调用 `./all_generate.py` 可以生成 visitor 模式的相关文件
@@ -25,5 +36,3 @@ Segcore 开发过程中可能使用到以下脚本与命令
   - `meta_gen` 从被访问数据结构的定义文件中，抽取类名列表 `<struct_name>`, 以供代码生成. 
   - 最后，生成好的文件都会放在 milvus/internal/core/src/query/generated 下.
     - 有部分 cpp 文件需要拷贝到 src/query/visitor 下做进一步修改
-
-## 
