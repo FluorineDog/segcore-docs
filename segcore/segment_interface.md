@@ -10,3 +10,7 @@
 具体细节可以参见 `${milvus_root}/internal/core/src/segcore/SegmentInterface.h`
 ## 内部函数 
 
+### 基本概念：
+1. Segment: 存放 Segment 的时间段
+2. chunk: 整个
+3. 
