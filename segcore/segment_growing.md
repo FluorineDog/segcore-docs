@@ -16,3 +16,4 @@ SegmentGrowing 储存数据的格式为分段(`chunk`)的列式数据, 每一段
 SegmentGrowing 内部还实现了小批量索引的能力. 在 `SegcoreConfig` 中预设了小批量索引的参数. 
 当 schema 中指定了 `metric_type` 时, Segment 中会使用预设的参数, 为每一个插入完毕的 `chunk` 
 创建对应的小批量索引, 加速查询. 
+

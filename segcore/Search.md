@@ -8,7 +8,7 @@ Boolean Expr 执行模式如下:
 
 Expr 文法参见 [expr_grammar.md](expr_grammar.md)
 
-# Segcore 查询流程
+## Segcore 查询流程
 获得 PlanAST 后, 使用访问者模式解释执行整棵 AST 树:
 1. VectorNode 节点包含向量查询的参数和可选的 Predicate.
    1. 当 Predicate 存在时, 访问执行 PredicateExpr 获得 bitset 作为向量查询的 bitmask. 
@@ -17,6 +17,6 @@ Expr 文法参见 [expr_grammar.md](expr_grammar.md)
    1. LogicalUnaryExpr: 非语句
    2. LogicalBinaryExpr: 与或语句
    3. TermExpr: 点查语句, `A in [1, 2, 3]`
-   4. CompareExpr: 比较语句
+   4. RangeExpr: 列数据与常量的比较语句
 3. TermExpr 和 CompareExpr 是执行的叶节点。
 
