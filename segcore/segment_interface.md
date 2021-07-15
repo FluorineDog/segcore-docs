@@ -18,7 +18,7 @@
 4. SystemField: 包含 RowID 和 Timestamp 两种，是额外储存的列
 5. SegOffset: 数据在 Segment 中的行号. 
 6. 
-## 内部函数
+## SegmentInternalInterface 内部函数
 1. `num_chunk()`: 整体 chunk 数量
 2. `size_per_chunk()`: 每个 chunk 的长度
 3. `get_active_count(Timestamp)`: Timestamp 筛选后，参与计算的行数

@@ -10,3 +10,5 @@ SegmentSealed 额外拥有以下接口:
    4. `DropFieldData(fieldId)`: 移除并释放已有的列数据
 
 在查询时, 允许部分列数据缺失, 只要查询时被涉及到的列数据都加载好了. 
+
+# SegmentSealedImpl 内部函数
