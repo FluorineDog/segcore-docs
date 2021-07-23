@@ -13,3 +13,4 @@
   - `FieldName`: 列名
   - `FieldId`: 列的唯一编号
   - (隐藏) `FieldOffset`, 为 Schema 中 `vector<Field>` 的下标. Segcore 内部计算基本基于 FieldOffset
+- `Span` 类似 std::span，支持 Vector 类型的数据，同时可以隐式转化为 `SpanBase` 以方便接口重载。

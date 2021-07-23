@@ -46,8 +46,7 @@ SegmentGrowing 内部还实现了小批量索引的能力. 在 `SegcoreConfig` �
        1. AckResponder 的 GetAck 接口可以返回 `reserverd`
 
 ### ConcurrentVector
-这是可以并发插入的列数据存储工具
+这是可以并发插入的列数据存储工具。由多段数据 chunk 构成。
 1. `grow_to_at_least(size)` 调用后，预留不低于 `size` 的空间
 2. `set_data_raw(element_offset, source, element_count)` 将 source 指向的一段连续数据
-3. `operator[]` 可以低效访问一个元素
-4. 
+3. `get_span(chunk_id)` 获取指向对应 chunk 的 span
